@@ -14,17 +14,17 @@ public class Provider<T> {
 
     T instance;
 
-    public Class<T> getCls() {
+    Class<T> getCls() {
         return cls;
     }
 
-    public Provider(Class<T> cls, Constructor<?> ctor, List<Provider<?>> providers) {
+    Provider(Class<T> cls, Constructor<?> ctor, List<Provider<?>> providers) {
         this.cls = cls;
         this.ctor = ctor;
         this.providers = providers;
     }
 
-    public T get() throws CtorException {
+    T get() throws CtorException {
         if (instance == null) {
             instance = createInstance();
         }
