@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-public class Provider<T> {
+class Provider<T> {
 
     Class<T> cls;
 
